@@ -9,6 +9,7 @@ import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 
 export default function TableA({ weather }) {
+  console.log({ weather });
   return (
     <TableContainer component={Paper}>
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
@@ -21,8 +22,6 @@ export default function TableA({ weather }) {
             <TableCell>Humidity</TableCell>
             <TableCell>Speed</TableCell>
             <TableCell>Description</TableCell>
-
-
           </TableRow>
         </TableHead>
         <TableBody>
@@ -40,8 +39,6 @@ export default function TableA({ weather }) {
               <TableCell>{row.main.humidity}</TableCell>
               <TableCell>{row.wind.speed}</TableCell>
               <TableCell>{row.weather[0].description}</TableCell>
-
-
             </TableRow>
           ))}
         </TableBody>
