@@ -1,11 +1,11 @@
 import React from 'react';
-import Tempapp from './components/Tempapp';
+import Form from './components/Form';
 
 const App = () => {
   return (
     <>
       <div>
-        <Tempapp />
+        <Form/>
       </div>
     </>
   );

@@ -52,21 +52,25 @@ html{
     font-size: 5rem;
     text-transform: capitalize;
 }
+
+.locationicon{
+    font-size: 4rem !important;
+}
 .temp{
     margin-top: 2.5rem;
     text-align: center;
     font-size: 3rem;
 }
 
-.inputData {
-    width: 100%;
-    height: 10vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.MuiButton-root {
+    width: 100% !important;
+    height: 4vh;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
 }
 
-.inputFeild{
+form{
     width: 50%;
     margin: auto;
     border-radius: 5rem;
@@ -131,20 +135,10 @@ html{
     }
 }
 
-@keyframes rotates {
-    from {
-        transform: translateX(-0.5rem);
-    }
-    from {
-        transform: translateX(0.5rem);
-    }
+h2 .locationicon{
+    margin-right: 1rem !important;
 }
-h2 i{
-    margin-right: 1rem;
-}
-.fa-street-view{
-    animation:3s linear .5s infinite alternate rotates;
-}
+
 @media (max-width: 600px) {
     .box {
         width: 90vw;
