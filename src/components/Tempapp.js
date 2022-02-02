@@ -24,7 +24,6 @@ const Tempapp = ({ search }) => {
     fetchApi();
   }, [search]);
 
-
   useEffect(() => {
     localStorage.setItem("weather", JSON.stringify(weather));
   }, [weather]);
@@ -52,7 +51,7 @@ const Tempapp = ({ search }) => {
           </div>
         )}
       </div>
-      <TableA weather={weather} />
+      {city ? <TableA weather={weather} /> : ""}
     </>
   );
 };
