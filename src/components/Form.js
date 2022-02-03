@@ -1,13 +1,15 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import { Button } from "@mui/material";
 import Tempapp from "./Tempapp";
 import "./css/style.css";
+import Inputcontext from "./store/ContextApi";
 
 const Form = () => {
-  const [search, setSearch] = useState("");
+  const ctx = useContext(Inputcontext);
   const [btn, setBtn] = useState(false);
+
   return (
     <>
       <Box
@@ -23,25 +25,20 @@ const Form = () => {
             <TextField
               id="standard-basic"
               label="City Name"
-              value={search}
+              value={ctx.name}
               variant="standard"
               onChange={(e) => {
-                setSearch(e.target.value);
+                ctx.addInput(e.target.value);
               }}
             />
-            <Button
-              variant="contained"
-              onClick={() => {
-                setBtn(true);
-              }}
-            >
+            <Button variant="contained" onClick={()=>{setBtn(true)}}>
               Get Weather
             </Button>
           </>
         ) : (
           ""
         )}
-        {btn ? <Tempapp search={search} /> : ""}
+        {btn ? <Tempapp/> : ""}
       </Box>
     </>
   );

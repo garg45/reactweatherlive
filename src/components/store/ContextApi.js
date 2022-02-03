@@ -1,27 +1,27 @@
-// import React, { createContext, useState } from "react";
-// import Form from "../Form";
+import React, { createContext, useState } from "react";
 
-// const Inputcontext = createContext({
-//   input: "",
-//   addInput: () => {},
-// });
+const Inputcontext = createContext({
+  name: "",
+  addInput: () => {},
+});
 
-// const ContextApi = () => {
-//   const [input, setInput] = useState("");
-//   const addInput = (input) => {
-//     setInput(input);
-//   };
-//   const context = {
-//     input: input,
-//     addInput,
-//   };
-//   return (
-//     <>
-//       <Inputcontext.Provider value={context}>
-//         <Form />
-//       </Inputcontext.Provider>
-//     </>
-//   );
-// };
-
-// export default Inputcontext;
+const ContextApi = (props) => {
+  const [input, setInput] = useState("Mumbai");
+  const addInput = (input) => {
+    setInput(input);
+  };
+  const context = {
+    name: input,
+    addInput,
+  };
+  //   console.log({ input });
+  return (
+    <>
+      <Inputcontext.Provider value={context}>
+        {props.children}
+      </Inputcontext.Provider>
+    </>
+  );
+};
+export default Inputcontext;
+export { ContextApi };

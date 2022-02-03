@@ -1,5 +1,4 @@
 import React from "react";
-
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
 import TableCell from "@mui/material/TableCell";
@@ -33,11 +32,11 @@ export default function TableA({ weather }) {
               <TableCell component="th" scope="row">
                 {row.name}
               </TableCell>
-              <TableCell>{row.main.temp_max}</TableCell>
-              <TableCell>{row.main.temp_min}</TableCell>
-              <TableCell>{row.main.pressure}</TableCell>
-              <TableCell>{row.main.humidity}</TableCell>
-              <TableCell>{row.wind.speed}</TableCell>
+              <TableCell>{row.main.temp_max}°Cel</TableCell>
+              <TableCell>{row.main.temp_min}°Cel</TableCell>
+              <TableCell>{row.main.pressure}mb</TableCell>
+              <TableCell>{row.main.humidity}%</TableCell>
+              <TableCell>{row.wind.speed}km/h</TableCell>
               <TableCell>{row.weather[0].description}</TableCell>
             </TableRow>
           ))}

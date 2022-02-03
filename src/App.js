@@ -1,14 +1,17 @@
-import React from 'react';
-import Form from './components/Form';
+import React from "react";
+import Form from "./components/Form";
+import { ContextApi } from "./components/store/ContextApi";
 
 const App = () => {
   return (
     <>
       <div>
-        <Form/>
+        <ContextApi>
+          <Form />
+        </ContextApi>
       </div>
     </>
   );
-}
+};
 
 export default App;
